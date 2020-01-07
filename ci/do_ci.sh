@@ -3,10 +3,10 @@
 set -e
 
 [ -z "${SRC_DIR}" ] && export SRC_DIR="`pwd`"
-[ -z "${BUILD_DIR}" ] && export BUILD_DIR=$HOME/build
+[ -z "${BUILD_DIR}" ] && export BUILD_DIR=/build
 mkdir -p "${BUILD_DIR}"
 
-BAZEL_OPTIONS=""
+BAZEL_OPTIONS="--cxxopt=-std=c++14"
 BAZEL_TEST_OPTIONS="$BAZEL_OPTIONS --test_output=errors"
 
 if [[ "$1" == "cmake.test" ]]; then
