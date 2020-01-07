@@ -1,5 +1,4 @@
-#ifndef INCLUDE_OPEN_TELEMETRY_TRACE_TRACER_H_
-#define INCLUDE_OPEN_TELEMETRY_TRACE_TRACER_H_
+#pragma once
 
 namespace opentelemetry
 {
@@ -12,4 +11,3 @@ class Tracer
 };
 }  // namespace trace
 }  // namespace opentelemetry
-#endif  // INCLUDE_OPEN_TELEMETRY_TRACE_TRACER_H_
