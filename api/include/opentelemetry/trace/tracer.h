@@ -6,7 +6,7 @@ namespace trace
 {
 class Tracer
 {
- public:
+public:
   Tracer();
 };
 }  // namespace trace
