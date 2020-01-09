@@ -12,7 +12,8 @@ namespace trace
 class Tracer
 {
 public:
-  Tracer(const string_view&, const string_view&);
+  Tracer(const string_view &, const string_view &);
+
 private:
   const string_view name;
   const string_view version;
