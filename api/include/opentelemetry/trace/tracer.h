@@ -8,7 +8,6 @@ namespace opentelemetry
 {
 namespace trace
 {
-
 class Tracer
 {
 public:
@@ -18,6 +17,5 @@ private:
   const string_view name;
   const string_view version;
 };
-
 }  // namespace trace
 }  // namespace opentelemetry
