@@ -1,7 +1,7 @@
 cc_test(
-      name = "tracer_factory",
+      name = "tracer_provider",
       srcs = [
-          "tracer_factory_test.cc",
+          "tracer_provider_test.cc",
       ],
     deps = [
         "//sdk",
