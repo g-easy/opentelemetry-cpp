@@ -21,10 +21,10 @@ cc_test(
 )
 
 cc_test(
-      name = "global_provider",
-      srcs = [
-          "global_provider_test.cc",
-      ],
+    name = "global_provider",
+    srcs = [
+        "global_provider_test.cc",
+    ],
     deps = [
         "//api",
         "@com_google_googletest//:gtest_main",
