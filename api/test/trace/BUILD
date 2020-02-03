@@ -21,9 +21,9 @@ cc_test(
 )
 
 cc_test(
-    name = "global_provider",
+    name = "provider",
     srcs = [
-        "global_provider_test.cc",
+        "provider_test.cc",
     ],
     deps = [
         "//api",
