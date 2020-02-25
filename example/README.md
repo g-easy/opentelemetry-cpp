@@ -7,8 +7,11 @@ $ ./build.sh
 + clang++-8 -I../api/include/ -std=c++11 -c main.cc
 + clang++-8 -I../api/include/ -std=c++11 -L. -Wl,-R. -l1 -l2 main.o -o main
 $ ./main
+$ ./main
 Start.
-terminate called after throwing an instance of 'std::bad_weak_ptr'
-  what():  bad_weak_ptr
-Aborted
+main: GetTracerProvider = 0xf88b00
+f1: GetTracerProvider = 0xf88b80
+f2: GetTracerProvider = 0xf88c00
+main: GetTracerProvider later = 0xf88b00
+Stop.
 ```
