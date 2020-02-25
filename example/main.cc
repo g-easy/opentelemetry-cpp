@@ -1,11 +1,15 @@
 #include <iostream>
 
-void f1();
-void f2();
+#include <opentelemetry/trace/provider.h>
+
+void f1(opentelemetry::trace::TracerProvider* p);
+void f2(opentelemetry::trace::TracerProvider* p);
 
 int main() {
   std::cout << "Start.\n";
-  f1();
-  f2();
+  opentelemetry::trace::TracerProvider* p =
+    opentelemetry::trace::Provider::GetTracerProvider();
+  f1(p);
+  f2(p);
   std::cout << "Stop.\n";
 }
