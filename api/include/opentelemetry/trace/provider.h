@@ -24,10 +24,9 @@ public:
 
 private:
   DefaultTracerProvider()
-      : tracer_{nostd::unique_ptr<opentelemetry::trace::NoopTracer>(
-            new opentelemetry::trace::NoopTracer)}
+      : tracer_{new opentelemetry::trace::NoopTracer}
   {}
-  nostd::unique_ptr<opentelemetry::trace::NoopTracer> tracer_;
+  std::shared_ptr<opentelemetry::trace::NoopTracer> tracer_;
 
   friend class Provider;
 };
