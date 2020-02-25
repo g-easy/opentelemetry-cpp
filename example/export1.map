@@ -1,4 +1,7 @@
 {
- global: extern "C++" { f1*; };
+ global: extern "C++" {
+  f1*;
+  opentelemetry::trace::Provider::Ptr*;
+ };
  local: *;
 };

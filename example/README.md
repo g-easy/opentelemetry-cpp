@@ -7,11 +7,10 @@ $ ./build.sh
 + clang++-8 -I../api/include/ -std=c++11 -c main.cc
 + clang++-8 -I../api/include/ -std=c++11 -L. -Wl,-R. -l1 -l2 main.o -o main
 $ ./main
-$ ./main
 Start.
-main: GetTracerProvider = 0xf88b00
-f1: GetTracerProvider = 0xf88b80
-f2: GetTracerProvider = 0xf88c00
-main: GetTracerProvider later = 0xf88b00
+main: GetTracerProvider = 0x1436b00
+f1: GetTracerProvider = 0x1436b00
+f2: GetTracerProvider = 0x1436b00
+main: GetTracerProvider later = 0x1436b00
 Stop.
 ```
