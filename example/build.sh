@@ -2,7 +2,11 @@
 CXX=clang++-8
 set -e
 set -x
-$CXX -I../api/include/ -std=c++11 -stdlib=libc++ -c lib1.cc
-$CXX -I../api/include/ -std=c++11 -stdlib=libstdc++ -c lib2.cc
-$CXX -I../api/include/ -std=c++11 -stdlib=libstdc++ -c main.cc
-$CXX -I../api/include/ -std=c++11 -stdlib=libstdc++ lib1.o lib2.o main.o -o main
+$CXX -I../api/include/ -std=c++11 -fPIC -c lib1.cc
+$CXX -shared -static-libgcc -static-libstdc++ -Wl,--version-script=export1.map lib1.o -o lib1.so
+
+$CXX -I../api/include/ -std=c++11 -fPIC -c lib2.cc
+$CXX -shared -static-libgcc -static-libstdc++ -Wl,--version-script=export2.map lib2.o -o lib2.so
+
+$CXX -I../api/include/ -std=c++11 -c main.cc
+$CXX -I../api/include/ -std=c++11 -L. -Wl,-R. -l1 -l2 main.o -o main
